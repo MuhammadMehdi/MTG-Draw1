@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 namespace MTG_Draw.Model
-{
+{   ///
     /// <summary>
     /// Interaktionslogik für Window1.xaml
     /// </summary>
