@@ -541,7 +541,7 @@ namespace MTG_Draw.Model
                 myCanvas.Children.Add(textBlock);
             }
 
-
+            
 
 
             void GSDraw(double xpos, double ypos, double GSHalterAbstand, double GSLaenge, Canvas myCanvas)
