@@ -142,42 +142,192 @@ namespace MTG_Draw.Model
 
                 }
             }
-            
 
-            public void Draw(Canvas myCanvas, /*ScrollViewer myScrollViewer,*/ HorizontalCura myProduct, double zoomfactor)
+
+            //public void Draw(Canvas myCanvas, /*ScrollViewer myScrollViewer,*/ HorizontalCura myProduct, double zoomfactor)
+            //{
+            //    double np_x = 200;   // 200
+            //    double np_y = 2200;   // 600
+            //    //double zoomfactor = 1;
+
+            //    //if (laenge > 1600) zoomfactor = 1600 / Laenge;
+            //    double strokethickness = 0.8 * zoomfactor;
+
+            //    myCanvas.Children.Clear();
+
+            //    SolidColorBrush brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("White"));
+
+            //    double cw = (Laenge + 1000) /** zoomfactor*/;
+            //    double CanvasWidth;
+
+            //    if (cw > 7800) CanvasWidth = cw;
+            //    else CanvasWidth = 7800 ;
+
+            //    double CanvasHeight = 5500;
+
+            //    myCanvas.Height = CanvasHeight;
+            //    myCanvas.Width = CanvasWidth;
+
+
+
+            //    double aw = myCanvas.ActualWidth;
+            //    double ah = myCanvas.ActualHeight;
+            //    //Rand
+            //    Rectangle rect = new System.Windows.Shapes.Rectangle()
+            //    {
+            //        Stroke = new SolidColorBrush(Colors.Black),
+            //        StrokeThickness = 2,
+            //        Fill = brush,
+            //        Width = CanvasWidth,
+            //        Height = CanvasHeight
+            //    };
+            //    Canvas.SetLeft(rect, 0);
+            //    Canvas.SetTop(rect, 0);
+            //    myCanvas.Children.Add(rect);
+
+            //    //Schrift
+            //    double logoPosX = 10;
+            //    double logoPosY = 10;
+
+            //    TextBlock textBlock = new TextBlock();
+            //    textBlock.Text = myProduct.Auftrag + "  "
+            //                    + myProduct.BezeichnungAuftrag.ToString() + "\r"
+            //                    + "Position:" + myProduct.Position.ToString() + "  "
+            //                    + myProduct.Anzahl.ToString() + " Stück     "
+            //                    + "  gezeichnet:   " + myProduct.Zeichner
+            //                    + "  Datum:    " + myProduct.Datum;
+            //    textBlock.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Black"));
+            //    textBlock.FontFamily = new FontFamily("Arial");
+            //    textBlock.FontSize = 100;
+            //    textBlock.TextWrapping = TextWrapping.Wrap;
+            //    //textBlock.FontStretch = FontStretches.UltraExpanded;
+            //    //textBlock.FontStyle = FontStyles.Italic;
+            //    //textBlock.FontWeight = FontWeights.UltraBold;
+            //    textBlock.Width = 2000;
+            //    textBlock.Height = 600;
+            //    Canvas.SetLeft(textBlock, 10);
+            //    Canvas.SetTop(textBlock, 10);
+            //    myCanvas.Children.Add(textBlock);
+
+            //    TextBlock textBlock1 = new TextBlock();
+            //    textBlock1.Text = myProduct.Bemerkungstext;
+            //    textBlock1.Width = 2000;
+            //    textBlock1.Height = 1000;
+            //    textBlock1.Background = Brushes.White;
+            //    textBlock1.Foreground = Brushes.Black;
+            //    textBlock1.FontFamily = new FontFamily("Arial");
+            //    textBlock1.FontSize = 80;
+            //    textBlock1.FontStretch = FontStretches.UltraExpanded;
+            //    //textBlock1.FontStyle = FontStyles.Italic;
+            //    textBlock1.FontWeight = FontWeights.Normal;
+            //    //textBlock1.LineHeight = Double.NaN;
+            //    textBlock1.Padding = new Thickness(5, 10, 5, 10);
+            //    textBlock1.TextAlignment = System.Windows.TextAlignment.Left;
+            //    textBlock1.TextWrapping = TextWrapping.Wrap;
+            //    //textBlock1.Typography.NumeralStyle = FontNumeralStyle.OldStyle;
+            //    //textBlock1.Typography.SlashedZero = true;
+            //    Canvas.SetLeft(textBlock1, 2000);
+            //    Canvas.SetTop(textBlock1, 3500);
+            //    myCanvas.Children.Add(textBlock1);
+
+
+
+
+
+            //    ProfileDraw(myCanvas, strokethickness, np_x, np_y, zoomfactor, myProduct);
+
+            //    ItemTyp myItemProperties = new ItemTyp();
+            //    Einbauebene myEinbauebene = new Einbauebene();
+
+            //    // Items ohne Block
+            //    foreach (Item myItem in myProduct.ListeItems) //if (myItem.Block.ToString() == "Schiene")
+            //        {
+            //            try
+            //            {
+            //            if (myItem.Typ.ToString() == "GS400")
+            //            {
+            //                GSDraw(np_x + myItem.Pos, np_y-myItem.Ypos, 400, myItem.Laenge, myCanvas);
+            //            }
+            //            else if (myItem.Typ.ToString() == "GS500")
+            //            {
+            //                GSDraw(myItem.Pos, myItem.Ypos, 500, myItem.Laenge, myCanvas);
+            //            }
+            //            else
+            //            {
+            //                myItemProperties = ItemProperties(myItem.Typ.ToString());
+            //                //myEinbauebene = EinbauebeneProperties(myItem.EinbauebeneID);
+            //                myEinbauebene = new Einbauebene();
+            //                myEinbauebene = myProduct.ListeEinbauebenen.Find(x => x.ID == myItem.EinbauebeneID);
+            //                for (int i = 1; i <= myItem.Anzahl; i++)
+            //                {
+            //                    double xpos = np_x + myItem.Pos + (i - 1) * myItemProperties.Abstand + myItemProperties.Xoffset;
+            //                    //double ypos = np_y + myItemProperties.Yoffset - GetEinbauebeneYoffset(myItem.EinbauebeneID);
+            //                    double ypos = np_y - myItem.Ypos + myItemProperties.Yoffset - myEinbauebene.Y;
+            //                    ItemDraw(myCanvas, myItem.Typ.ToString(), xpos, ypos + 2, myItem.Rotation, zoomfactor, myItemProperties.Faktor);
+
+            //                    if (myItem.Kreis != null)
+            //                    {
+            //                        TextDraw(myItem.Kreis.ToString(), xpos, ypos, zoomfactor, (Color)ColorConverter.ConvertFromString("Black"), myCanvas);
+            //                    }
+            //                }
+            //            }
+
+            //            }
+            //            catch
+            //            {
+            //                MessageBox.Show("ItemProperties Error (Items ohne Block)" + myItem.Typ.ToString());
+            //            }
+            //        }
+
+
+            //    //System.Windows.Point realSize = new System.Windows.Point(myCanvas.ActualHeight, myCanvas.ActualWidth);
+            //    //System.Windows.Point sizeAvailable = new System.Windows.Point(myScrollViewer.ActualHeight, myScrollViewer.ActualWidth);
+
+            //    //double scaleX = sizeAvailable.X / realSize.X;
+            //    //double scaleY = sizeAvailable.Y / realSize.Y;
+
+            //    //double newScale = Math.Round(Math.Min(scaleX, scaleY), 2);
+
+            //    //ScaleTransform scaletransform = new ScaleTransform();
+            //    //scaletransform.ScaleX = newScale;
+
+            //    //myCanvas.RenderTransform = scaletransform;
+
+
+            //}
+            public void Draw(Canvas myCanvas, HorizontalCura myProduct, double zoomfactor)
             {
-                double np_x = 200;   // 200
+                var LeftItem = myProduct.ListeItems.OrderBy(x => x.Pos).First();
+                var RightItem = myProduct.ListeItems.OrderBy(x => x.Pos).Last();
+
+                double np_x = 200 - LeftItem.Pos;
                 double np_y = 2200;   // 600
-                //double zoomfactor = 1;
 
-                //if (laenge > 1600) zoomfactor = 1600 / Laenge;
-                double strokethickness = 0.8 * zoomfactor;
+                double strokethickness = 1;
 
-                myCanvas.Children.Clear();
-
-                SolidColorBrush brush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("White"));
-
-                double cw = (Laenge + 1000) /** zoomfactor*/;
+                double cw = (Laenge + 1000 - LeftItem.Pos);
                 double CanvasWidth;
 
                 if (cw > 7800) CanvasWidth = cw;
-                else CanvasWidth = 7800 ;
-                       
+                else CanvasWidth = 7800;
+
                 double CanvasHeight = 5500;
 
                 myCanvas.Height = CanvasHeight;
                 myCanvas.Width = CanvasWidth;
 
-
-
                 double aw = myCanvas.ActualWidth;
                 double ah = myCanvas.ActualHeight;
+
+                //Clear Canvas
+                myCanvas.Children.Clear();
+
                 //Rand
                 Rectangle rect = new System.Windows.Shapes.Rectangle()
                 {
-                    Stroke = new SolidColorBrush(Colors.Black),
+                    Stroke = Brushes.Black,
                     StrokeThickness = 2,
-                    Fill = brush,
+                    Fill = Brushes.White,
                     Width = CanvasWidth,
                     Height = CanvasHeight
                 };
@@ -185,15 +335,16 @@ namespace MTG_Draw.Model
                 Canvas.SetTop(rect, 0);
                 myCanvas.Children.Add(rect);
 
-                //Schrift
-                double logoPosX = 10;
-                double logoPosY = 10;
+                // Logo, Adresse
+                ItemDraw(myCanvas, "MTG", 850, 225, 0, 1, 15);
 
+
+                // Text Auftrag
                 TextBlock textBlock = new TextBlock();
                 textBlock.Text = myProduct.Auftrag + "  "
                                 + myProduct.BezeichnungAuftrag.ToString() + "\r"
                                 + "Position:" + myProduct.Position.ToString() + "  "
-                                + myProduct.Anzahl.ToString() + " Stück     "
+                                + myProduct.Anzahl.ToString() + " Stück     " + myProduct.bezeichnungPosition.ToString() + "     "
                                 + "  gezeichnet:   " + myProduct.Zeichner
                                 + "  Datum:    " + myProduct.Datum;
                 textBlock.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Black"));
@@ -202,17 +353,40 @@ namespace MTG_Draw.Model
                 textBlock.TextWrapping = TextWrapping.Wrap;
                 //textBlock.FontStretch = FontStretches.UltraExpanded;
                 //textBlock.FontStyle = FontStyles.Italic;
-                //textBlock.FontWeight = FontWeights.UltraBold;
+                textBlock.FontWeight = FontWeights.Bold;
                 textBlock.Width = 2000;
                 textBlock.Height = 600;
-                Canvas.SetLeft(textBlock, 10);
-                Canvas.SetTop(textBlock, 10);
+                Canvas.SetLeft(textBlock, 2200);
+                Canvas.SetTop(textBlock, 50);
                 myCanvas.Children.Add(textBlock);
+
+                //Legende
+                double legende_Y = 3500;
+                TextlineDraw("Legende", 100, legende_Y, 2000, 120, 80, FontWeights.Bold, Brushes.Black, myCanvas);
+
+                var DistinctItems = myProduct.ListeItems.GroupBy(x => x.Typ).Select(y => y.First()).OrderBy(z => z.EinbauebeneID);  //Jedes Element der Liste nur einmal
+                ItemTyp myItemProperties = new ItemTyp();
+                //Für jeden Block
+                foreach (Item myItem in DistinctItems) //if ((myItem.Block.ToString() != "Schiene") && (myItem.Typ.ToString() != "Block"))
+                {
+                    myItemProperties = ItemProperties(myItem.Typ.ToString());
+                    string legende = myItemProperties.TextLegende.Trim();
+
+                    if (legende.Length > 5)
+                    {
+                        legende_Y += 150;
+                        ItemDraw(myCanvas, myItem.Typ.ToString(), 140, legende_Y + 60, myItem.Rotation, zoomfactor, myItemProperties.Faktor);
+                        TextlineDraw(legende, 200, legende_Y, 2500, 100, 80, FontWeights.Normal, Brushes.Black, myCanvas);
+                    }
+                }
+
+                // Bemerkungen
+                TextlineDraw("Bemerkungen", 2750, 3500, 2000, 120, 80, FontWeights.Bold, Brushes.Black, myCanvas);
 
                 TextBlock textBlock1 = new TextBlock();
                 textBlock1.Text = myProduct.Bemerkungstext;
-                textBlock1.Width = 2000;
-                textBlock1.Height = 1000;
+                textBlock1.Width = 3000;
+                textBlock1.Height = 1800;
                 textBlock1.Background = Brushes.White;
                 textBlock1.Foreground = Brushes.Black;
                 textBlock1.FontFamily = new FontFamily("Arial");
@@ -226,27 +400,50 @@ namespace MTG_Draw.Model
                 textBlock1.TextWrapping = TextWrapping.Wrap;
                 //textBlock1.Typography.NumeralStyle = FontNumeralStyle.OldStyle;
                 //textBlock1.Typography.SlashedZero = true;
-                Canvas.SetLeft(textBlock1, 2000);
-                Canvas.SetTop(textBlock1, 3500);
+                Canvas.SetLeft(textBlock1, 2750);
+                Canvas.SetTop(textBlock1, 3600);
                 myCanvas.Children.Add(textBlock1);
 
+                // Freigabestempel
+                ItemDraw(myCanvas, "Freigabe", 6700, 4000, 0, 1, 3);
+
+                //Fussbodenlinie
+                System.Windows.Shapes.Line fussboden = new System.Windows.Shapes.Line();
+                fussboden.X1 = np_x;
+                fussboden.X2 = np_y + myProduct.MontageHoehe;
+                fussboden.Y1 = np_x + myProduct.Laenge;
+                fussboden.Y2 = np_y + myProduct.MontageHoehe;
+
+                myCanvas.Children.Add(fussboden);
+
+                int sh = 50;  // Höhe der Schraffur
+                double xf = fussboden.X1 + sh / 2; ; double yf = fussboden.X2 + sh / 2;
+                for (int i = 0; i <= (int)(myProduct.Laenge / sh - 1); i++)
+                {
+                    ItemDraw(myCanvas, "Schraffur", xf, yf + sh / 2, 0, 1, 1);
+                    xf += sh;
+                }
+                //ItemDraw(myCanvas, "Nullpunkt", x, y, 0, 1, 1);
 
 
 
 
                 ProfileDraw(myCanvas, strokethickness, np_x, np_y, zoomfactor, myProduct);
 
-                ItemTyp myItemProperties = new ItemTyp();
+                //ItemDraw(myCanvas, "IV2_2z_2GS_Seite", 6000, np_y, 0, zoomfactor, 1);
+
+
+                //ItemTyp myItemProperties = new ItemTyp();
                 Einbauebene myEinbauebene = new Einbauebene();
 
                 // Items ohne Block
                 foreach (Item myItem in myProduct.ListeItems) //if (myItem.Block.ToString() == "Schiene")
+                {
+                    try
                     {
-                        try
-                        {
                         if (myItem.Typ.ToString() == "GS400")
                         {
-                            GSDraw(np_x + myItem.Pos, np_y-myItem.Ypos, 400, myItem.Laenge, myCanvas);
+                            GSDraw(np_x + myItem.Pos, np_y - myItem.Ypos, 400, myItem.Laenge, myCanvas);
                         }
                         else if (myItem.Typ.ToString() == "GS500")
                         {
@@ -272,29 +469,18 @@ namespace MTG_Draw.Model
                             }
                         }
 
-                        }
-                        catch
-                        {
-                            MessageBox.Show("ItemProperties Error (Items ohne Block)" + myItem.Typ.ToString());
-                        }
                     }
-
-
-                //System.Windows.Point realSize = new System.Windows.Point(myCanvas.ActualHeight, myCanvas.ActualWidth);
-                //System.Windows.Point sizeAvailable = new System.Windows.Point(myScrollViewer.ActualHeight, myScrollViewer.ActualWidth);
-
-                //double scaleX = sizeAvailable.X / realSize.X;
-                //double scaleY = sizeAvailable.Y / realSize.Y;
-
-                //double newScale = Math.Round(Math.Min(scaleX, scaleY), 2);
-
-                //ScaleTransform scaletransform = new ScaleTransform();
-                //scaletransform.ScaleX = newScale;
-
-                //myCanvas.RenderTransform = scaletransform;
-
-
+                    catch
+                    {
+                        MessageBox.Show("ItemProperties Error (Items ohne Block)" + myItem.Typ.ToString());
+                    }
+                }
             }
+
+
+
+
+
 
             public void ProfileDraw(Canvas myCanvas, double strokethickness, double np_x, double np_y, double zoomfactor, HorizontalCura myProduct)
             {
@@ -338,6 +524,25 @@ namespace MTG_Draw.Model
                 Canvas.SetTop(textBlock, (y-70) * zoomfactor);
                 myCanvas.Children.Add(textBlock);
             }
+
+            private void TextlineDraw(string text, double x, double y, double width, double height, double fontsize, FontWeight fontweight, Brush color, Canvas myCanvas)
+            {
+                TextBlock textBlock = new TextBlock();
+                textBlock.TextAlignment = System.Windows.TextAlignment.Left;
+                textBlock.FontFamily = new FontFamily("Arial");
+                textBlock.Text = text;
+                textBlock.Width = width;
+                textBlock.Height = height;
+                textBlock.FontSize = fontsize;
+                textBlock.FontWeight = fontweight;
+                textBlock.Foreground = color;
+                Canvas.SetLeft(textBlock, x);
+                Canvas.SetTop(textBlock, y);
+                myCanvas.Children.Add(textBlock);
+            }
+
+
+
 
             void GSDraw(double xpos, double ypos, double GSHalterAbstand, double GSLaenge, Canvas myCanvas)
             {
