@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses1">
+  <DataContextMoniker Name="/DataClasses1DataContext" />
+  <nestedChildShapes>
+    <classShape Id="6d8947be-f7a7-4c85-b15a-5b13a4a529af" absoluteBounds="1.25, 1.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataClasses1DataContext/HoCuraEinbauebenen" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b1541632-6cce-4811-80e9-47d5480144b9" absoluteBounds="1.2649999999999997, 1.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="99c94dd8-7887-4074-a1ee-0a20f3616d6e" absoluteBounds="4, 1.25, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DataClasses1DataContext/Items" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b21ea462-d213-49bc-8e5e-d2fd962334c9" absoluteBounds="4.015, 1.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

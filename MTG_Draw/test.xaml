@@ -1,0 +1,175 @@
+<!-- Created with Ai->XAML Export Plug-In Version 0.2 (PC/64) -->
+<!-- By Mike Swanson (http://blog.mikeswanson.com/)           -->
+
+<Viewbox Width="124.720" Height="150.110"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Canvas Width="124.720" Height="150.110">
+
+  <Canvas>
+
+  <!-- Ebene 1/<Linie> -->
+  <Path StrokeThickness="0.3" Stroke="#ff000000" StrokeMiterLimit="1.0" Data="F1 M 12.944,149.911 L 111.765,149.911"/>
+
+  <!-- Ebene 1/<Linie> -->
+  <Path StrokeThickness="0.3" Stroke="#ff000000" StrokeMiterLimit="1.0" Data="F1 M 124.542,36.951 L 124.542,138.050"/>
+
+  <!-- Ebene 1/<Linie> -->
+  <Path StrokeThickness="0.3" Stroke="#ff000000" StrokeMiterLimit="1.0" Data="F1 M 0.188,37.201 L 0.188,138.300"/>
+
+  <!-- Ebene 1/<Pfad> -->
+  <Path StrokeThickness="0.3" Stroke="#ff000000" StrokeMiterLimit="1.0" Fill="#ff094621" Data="F1 M 12.944,0.125 C 5.893,0.125 0.188,5.830 0.188,12.881 L 0.188,38.334 C 0.188,31.283 5.893,25.578 12.944,25.578 L 111.765,25.578 C 118.815,25.578 124.521,31.283 124.521,38.334 L 124.521,12.881 C 124.521,5.830 118.815,0.125 111.765,0.125 L 12.944,0.125 Z"/>
+
+  <!-- Ebene 1/<Pfad> -->
+  <Path StrokeThickness="0.3" Stroke="#ff000000" StrokeMiterLimit="1.0" Fill="#ffffffff" Data="F1 M 107.551,20.757 L 107.551,1.454 L 17.042,1.454 L 17.042,20.757 L 0.188,20.757 L 124.521,20.757"/>
+
+  <Canvas>
+
+  <Canvas>
+
+  <Canvas>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Pfad> -->
+  <Path Fill="#ff094621" Data="F1 M 111.765,149.911 L 12.944,149.911 C 5.899,149.911 0.188,144.200 0.188,137.155 L 0.188,38.334 C 0.188,31.289 5.899,25.578 12.944,25.578 L 111.765,25.578 C 118.810,25.578 124.521,31.289 124.521,38.334 L 124.521,137.155 C 124.521,144.200 118.810,149.911 111.765,149.911"/>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Pfad> -->
+  <Path StrokeThickness="0.3" Stroke="#ff000000" StrokeMiterLimit="1.0" Data="F1 M 111.765,149.911 L 12.944,149.911 C 5.899,149.911 0.188,144.200 0.188,137.155 L 0.188,38.334 C 0.188,31.289 5.899,25.578 12.944,25.578 L 111.765,25.578 C 118.810,25.578 124.521,31.289 124.521,38.334 L 124.521,137.155 C 124.521,144.200 118.810,149.911 111.765,149.911 Z"/>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Zuschneidungspfad> -->
+  <Canvas.Clip>
+    <PathGeometry Figures=" M 0.000,25.390 L 124.720,25.390 L 124.720,150.110 L 0.000,150.110 L 0.000,25.390 Z"/>
+  </Canvas.Clip>
+
+  </Canvas>
+
+  <Canvas>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Pfad> -->
+  <Path Data="F1 M 8.502,141.609 L 8.502,33.892 L 116.219,33.892 L 116.219,141.609 L 8.502,141.609 Z">
+    <Path.Fill>
+      <LinearGradientBrush MappingMode="Absolute" StartPoint="-1.395,0.000" EndPoint="-0.395,0.000">
+        <LinearGradientBrush.GradientStops>
+          <GradientStop Offset="0.00" Color="#ff094621"/>
+          <GradientStop Offset="0.87" Color="#ff043818"/>
+          <GradientStop Offset="1.00" Color="#ff002b0e"/>
+          <GradientStop Offset="1.00" Color="#ff002b0e"/>
+        </LinearGradientBrush.GradientStops>
+        <LinearGradientBrush.Transform>
+          <MatrixTransform Matrix="0.000,-107.717,107.717,0.000,62.360,-8.631" />
+        </LinearGradientBrush.Transform>
+      </LinearGradientBrush>
+    </Path.Fill>
+  </Path>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Zuschneidungspfad> -->
+  <Canvas.Clip>
+    <PathGeometry Figures=" M 8.502,87.750 C 8.502,117.496 32.615,141.609 62.360,141.609 C 92.105,141.609 116.219,117.496 116.219,87.750 C 116.219,58.005 92.105,33.892 62.360,33.892 C 32.615,33.892 8.502,58.005 8.502,87.750"/>
+  </Canvas.Clip>
+
+  </Canvas>
+
+  <Canvas>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Pfad> -->
+  <Path StrokeThickness="0.5" Stroke="#ff000000" StrokeMiterLimit="1.0" Data="F1 M 116.219,87.750 C 116.219,117.496 92.106,141.609 62.360,141.609 C 32.615,141.609 8.502,117.496 8.502,87.750 C 8.502,58.005 32.615,33.892 62.360,33.892 C 92.106,33.892 116.219,58.005 116.219,87.750 Z"/>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Pfad> -->
+  <Path Fill="#ff8d8d8d" Data="F1 M 69.446,87.750 C 69.446,91.664 66.273,94.836 62.360,94.836 C 58.446,94.836 55.273,91.664 55.273,87.750 C 55.273,83.836 58.446,80.664 62.360,80.664 C 66.273,80.664 69.446,83.836 69.446,87.750"/>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Pfad> -->
+  <Path StrokeThickness="0.3" Stroke="#ff000000" StrokeMiterLimit="1.0" Data="F1 M 69.446,87.750 C 69.446,91.664 66.273,94.836 62.360,94.836 C 58.446,94.836 55.273,91.664 55.273,87.750 C 55.273,83.836 58.446,80.664 62.360,80.664 C 66.273,80.664 69.446,83.836 69.446,87.750 Z"/>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Pfad> -->
+  <Path Fill="#ff010102" Data="F1 M 42.517,87.750 C 42.517,92.447 38.709,96.254 34.013,96.254 C 29.316,96.254 25.509,92.447 25.509,87.750 C 25.509,83.054 29.316,79.246 34.013,79.246 C 38.709,79.246 42.517,83.054 42.517,87.750"/>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Pfad> -->
+  <Path Fill="#ff010102" Data="F1 M 99.210,87.750 C 99.210,92.447 95.402,96.254 90.706,96.254 C 86.009,96.254 82.202,92.447 82.202,87.750 C 82.202,83.054 86.009,79.246 90.706,79.246 C 95.402,79.246 99.210,83.054 99.210,87.750"/>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Pfad> -->
+  <Path StrokeThickness="0.3" Stroke="#ff000000" StrokeMiterLimit="1.0" Data="F1 M 8.964,80.664 L 12.500,80.664"/>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Pfad> -->
+  <Path StrokeThickness="0.3" Stroke="#ff000000" StrokeMiterLimit="1.0" Data="F1 M 12.500,67.724 L 12.500,80.664"/>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Pfad> -->
+  <Path StrokeThickness="0.3" Stroke="#ff000000" StrokeMiterLimit="1.0" Data="F1 M 12.500,108.150 L 12.500,94.837"/>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Pfad> -->
+  <Path StrokeThickness="0.3" Stroke="#ff000000" StrokeMiterLimit="1.0" Data="F1 M 8.915,94.837 L 12.500,94.837"/>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Pfad> -->
+  <Path Fill="#ff000000" Data="F1 M 115.770,80.664 L 112.235,80.664"/>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Pfad> -->
+  <Path StrokeThickness="0.3" Stroke="#ff000000" StrokeMiterLimit="1.0" Data="F1 M 115.770,80.664 L 112.235,80.664"/>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Pfad> -->
+  <Path StrokeThickness="0.3" Stroke="#ff000000" StrokeMiterLimit="1.0" Data="F1 M 112.235,80.664 L 112.235,67.388"/>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Pfad> -->
+  <Path StrokeThickness="0.3" Stroke="#ff000000" StrokeMiterLimit="1.0" Data="F1 M 112.235,94.837 L 112.235,94.837"/>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Pfad> -->
+  <Path StrokeThickness="0.3" Stroke="#ff000000" StrokeMiterLimit="1.0" Data="F1 M 115.770,94.837 L 112.235,94.837"/>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Pfad> -->
+  <Path StrokeThickness="0.3" Stroke="#ff000000" StrokeMiterLimit="1.0" Data="F1 M 112.235,94.837 L 112.235,108.108"/>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Pfad> -->
+  <Path Fill="#ff8c8c8d" Data="F1 M 63.500,39.892 L 61.167,39.892 L 61.167,33.892 L 63.500,33.892 L 63.500,39.892 Z"/>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Pfad> -->
+  <Path StrokeThickness="0.3" Stroke="#ff000000" StrokeMiterLimit="1.0" Data="F1 M 63.500,39.892 L 61.167,39.892 L 61.167,33.892 L 63.500,33.892 L 63.500,39.892 Z"/>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Pfad> -->
+  <Path Fill="#ff8c8c8d" Data="F1 M 63.500,141.609 L 61.167,141.609 L 61.167,135.609 L 63.500,135.609 L 63.500,141.609 Z"/>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Pfad> -->
+  <Path StrokeThickness="0.3" Stroke="#ff000000" StrokeMiterLimit="1.0" Data="F1 M 63.500,141.609 L 61.167,141.609 L 61.167,135.609 L 63.500,135.609 L 63.500,141.609 Z"/>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Zuschneidungspfad> -->
+  <Canvas.Clip>
+    <PathGeometry Figures=" M 0.000,25.390 L 124.720,25.390 L 124.720,150.110 L 0.000,150.110 L 0.000,25.390 Z"/>
+  </Canvas.Clip>
+
+  </Canvas>
+
+  <Canvas>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Pfad> -->
+  <Path Data="F1 M 89.536,27.087 L 105.143,27.087 L 105.143,42.696 L 89.536,42.696 L 89.536,27.087 Z">
+    <Path.Fill>
+      <RadialGradientBrush MappingMode="Absolute" GradientOrigin="0.000,19.251" Center="0.000,19.251" RadiusX="1.000" RadiusY="1.000">
+        <RadialGradientBrush.GradientStops>
+          <GradientStop Offset="0.00" Color="#ff47af64"/>
+          <GradientStop Offset="0.50" Color="#ff57b149"/>
+          <GradientStop Offset="1.00" Color="#ff67b32d"/>
+          <GradientStop Offset="1.00" Color="#ff67b32d"/>
+          <GradientStop Offset="1.00" Color="#ff67b32d"/>
+        </RadialGradientBrush.GradientStops>
+        <RadialGradientBrush.Transform>
+          <MatrixTransform Matrix="7.804,0.000,0.000,7.804,97.339,-115.348" />
+        </RadialGradientBrush.Transform>
+      </RadialGradientBrush>
+    </Path.Fill>
+  </Path>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Beschnittgruppe>/<Zuschneidungspfad> -->
+  <Canvas.Clip>
+    <PathGeometry Figures=" M 89.536,34.892 C 89.536,39.202 93.029,42.696 97.340,42.696 C 101.650,42.696 105.143,39.202 105.143,34.892 C 105.143,30.581 101.650,27.087 97.340,27.087 C 93.029,27.087 89.536,30.581 89.536,34.892"/>
+  </Canvas.Clip>
+
+  </Canvas>
+
+  <!-- Ebene 1/<Gruppe>/<Beschnittgruppe>/<Zuschneidungspfad> -->
+  <Canvas.Clip>
+    <PathGeometry Figures=" M 0.000,25.390 L 124.720,25.390 L 124.720,150.110 L 0.000,150.110 L 0.000,25.390 Z"/>
+  </Canvas.Clip>
+
+  </Canvas>
+
+  </Canvas>
+
+  </Canvas>
+</Canvas>
+</Viewbox>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LocalDB" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\LocalDB.mdf;Integrated Security=True" SettingsObjectName="MTG_Draw.Properties.Settings" SettingsPropertyName="LocalDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.HoCuraEinbauebenen" Member="HoCuraEinbauebenen">
+    <Type Name="HoCuraEinbauebenen">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="X" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Y" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Items" Member="Items">
+    <Type Name="Items">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Bezeichnung" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Xoffset" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Yoffset" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DxfBlock" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Abstand" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
