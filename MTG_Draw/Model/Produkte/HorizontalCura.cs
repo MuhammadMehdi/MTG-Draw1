@@ -344,8 +344,8 @@ namespace MTG_Draw.Model
                 textBlock.Text = myProduct.Auftrag + "  "
                                 + myProduct.BezeichnungAuftrag.ToString() + "\r"
                                 + "Position:" + myProduct.Position.ToString() + "  "
-                                + myProduct.Anzahl.ToString() + " Stück     " + myProduct.bezeichnungPosition.ToString() + "     "
-                                + "  gezeichnet:   " + myProduct.Zeichner
+                                + myProduct.Anzahl.ToString() + " Stück     " + myProduct.bezeichnungPosition.ToString() +"\r"
+                                + "gezeichnet:   " + myProduct.Zeichner
                                 + "  Datum:    " + myProduct.Datum;
                 textBlock.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Black"));
                 textBlock.FontFamily = new FontFamily("Arial");
@@ -354,7 +354,7 @@ namespace MTG_Draw.Model
                 //textBlock.FontStretch = FontStretches.UltraExpanded;
                 //textBlock.FontStyle = FontStyles.Italic;
                 textBlock.FontWeight = FontWeights.Bold;
-                textBlock.Width = 2000;
+                textBlock.Width = 4000;
                 textBlock.Height = 600;
                 Canvas.SetLeft(textBlock, 2200);
                 Canvas.SetTop(textBlock, 50);
@@ -461,7 +461,7 @@ namespace MTG_Draw.Model
                                 //double ypos = np_y + myItemProperties.Yoffset - GetEinbauebeneYoffset(myItem.EinbauebeneID);
                                 double ypos = np_y - myItem.Ypos + myItemProperties.Yoffset - myEinbauebene.Y;
                                 ItemDraw(myCanvas, myItem.Typ.ToString(), xpos, ypos + 2, myItem.Rotation, zoomfactor, myItemProperties.Faktor);
-
+                                Console.WriteLine(myItem.Typ.ToString());
                                 if (myItem.Kreis != null)
                                 {
                                     TextDraw(myItem.Kreis.ToString(), xpos, ypos, zoomfactor, (Color)ColorConverter.ConvertFromString("Black"), myCanvas);
@@ -835,6 +835,7 @@ namespace MTG_Draw.Model
 
                 try
                 {
+                    //Auftragsdaten oben
                     double logoPosX = -500;
                     double logoPosY = 2100;
                     double textPosX = 600;
@@ -850,12 +851,14 @@ namespace MTG_Draw.Model
                     DrawText(myProduct.Position.ToString() + "    " + myProduct.Anzahl.ToString() + " Stück     " + myProduct.BezeichnungPosition, textPosX, textPosY -= 1.5 * TextHeight, TextHeight, "Text", "Romans", 0, netDxf.Entities.TextAlignment.BaselineLeft, doc);
                     DrawText(myProduct.Version + "  gezeichnet:   "  + myProduct.Zeichner + "      Datum:    " + myProduct.Datum, textPosX, textPosY -= 1.5 * TextHeight, TextHeight, "Text", "Romans", 0, netDxf.Entities.TextAlignment.BaselineLeft, doc);
 
-                    logoPosX = 5000;
+                    // Freigabestempel
+                    logoPosX = 6700;
                     logoPosY = legende_Y;
                     DrawBlock("Freigabe", logoPosX, logoPosY, 0, docLayer, doc);
                     
+                    //Bemerkungstext
                     textPosY = legende_Y;
-                    textPosX = 2500;
+                    textPosX = 2750;
 
                     netDxf.Entities.MText myMText = new MText();
                     myMText.Position = new Vector3(textPosX, textPosY, 0.0);
@@ -1020,7 +1023,8 @@ namespace MTG_Draw.Model
                         lastx = myItem.Pos;
                     }
                 DrawDimension(lastx, masspos1, myProduct.Laenge, masspos1, massab, doc);
-                massab -= 100;
+                massab = -700;
+                // Bemassung Gesamtlänge
                 DrawDimension(0, masspos1, myProduct.Laenge, masspos1, massab, doc);
 
 

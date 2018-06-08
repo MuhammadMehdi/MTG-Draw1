@@ -46,7 +46,7 @@ namespace MTG_Draw
         DataSet XmlDataSet = new DataSet();
         string XmlFileName;
         string DxfFileName;
-        double zoomfactor = 1;
+        double zoomfactor = 0.05;
         double trans_x = 0;
         double trans_y = 0;
 
@@ -254,12 +254,15 @@ namespace MTG_Draw
         {
 
             PrintDialog prnt = new PrintDialog();
+            
+
             if (prnt.ShowDialog() == true)
             {
 
                 Size pageSize = new Size(prnt.PrintableAreaWidth, prnt.PrintableAreaHeight);
                 Canvas1.Measure(pageSize);
                 Canvas1.Arrange(new Rect(5, 5, pageSize.Width, pageSize.Height));
+
 
 
                 if (prnt.ShowDialog() == true)
