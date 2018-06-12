@@ -79,7 +79,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
+    <Compile Include="DragableObject.xaml.cs">
+      <DependentUpon>DragableObject.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Model\ColorToBrushConverter.cs" />
+    <Page Include="DragableObject.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

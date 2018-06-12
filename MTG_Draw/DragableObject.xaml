@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="Dragable1.DragableObject"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Dragable1"
+             mc:Ignorable="d" >
+    <Canvas>
+        <Rectangle Fill="Red" Height="30" Width="30" />
+    </Canvas>
+</UserControl>
