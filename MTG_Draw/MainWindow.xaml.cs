@@ -63,7 +63,7 @@ namespace MTG_Draw
 
         public class Settings
         {
-            private string lastpath = @"C:\users\sb\desktop";
+            private string lastpath = @"C:\users\%UserName%\desktop";
 
             public string Lastpath { get => lastpath; set => lastpath = value; }
         }
