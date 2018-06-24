@@ -202,17 +202,16 @@
             <!--<Button Grid.Row="0" Grid.Column="3" x:Name="DXF_Werkstattzeichnung" Content="DXF_Werkstattzeichnung" Click="DXF_Werkstattzeichnung_Click"  />-->
         </Grid>
 
-        <Grid DockPanel.Dock="Top" Background="WhiteSmoke">
-            <StackPanel>
-                <Canvas  HorizontalAlignment="Left" VerticalAlignment="Top"  x:Name="Canvas1"  
+        <!--<Grid DockPanel.Dock="Top" Background="Red">-->
+            <!--<StackPanel Background="Blue">-->
+                <Canvas Background="WhiteSmoke" HorizontalAlignment="Left" VerticalAlignment="Top"  x:Name="Canvas1"  
                         ScrollViewer.CanContentScroll="False" 
                         MouseLeftButtonDown="Canvas1_MouseLeftButtonDown" 
                         MouseLeftButtonUp="Canvas1_MouseLeftButtonUp" 
                         MouseWheel="MouseWheelHandler" Height="Auto" Width="Auto" >
                 </Canvas>
-            </StackPanel>
-
-        </Grid>
+            <!--</StackPanel>-->
+        <!--</Grid>-->
 
 
 

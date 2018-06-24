@@ -323,17 +323,17 @@ namespace MTG_Draw.Model
                 myCanvas.Children.Clear();
 
                 //Rand
-                Rectangle rect = new System.Windows.Shapes.Rectangle()
-                {
-                    Stroke = Brushes.Black,
-                    StrokeThickness = 2,
-                    Fill = Brushes.White,
-                    Width = CanvasWidth,
-                    Height = CanvasHeight
-                };
-                Canvas.SetLeft(rect, 0);
-                Canvas.SetTop(rect, 0);
-                myCanvas.Children.Add(rect);
+                //Rectangle rect = new System.Windows.Shapes.Rectangle()
+                //{
+                //    Stroke = Brushes.Black,
+                //    StrokeThickness = 2,
+                //    Fill = Brushes.White,
+                //    Width = CanvasWidth,
+                //    Height = CanvasHeight
+                //};
+                //Canvas.SetLeft(rect, 0);
+                //Canvas.SetTop(rect, 0);
+                //myCanvas.Children.Add(rect);
 
                 // Logo, Adresse
                 ItemDraw(myCanvas, "MTG", 850, 225, 0, 1, 15);

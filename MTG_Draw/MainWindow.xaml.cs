@@ -254,27 +254,27 @@ namespace MTG_Draw
         {
 
             PrintDialog prnt = new PrintDialog();
-            
+
 
             if (prnt.ShowDialog() == true)
             {
 
-                Size pageSize = new Size(prnt.PrintableAreaWidth, prnt.PrintableAreaHeight);
-                Canvas1.Measure(pageSize);
-                Canvas1.Arrange(new Rect(5, 5, pageSize.Width, pageSize.Height));
+                //Size pageSize = new Size(prnt.PrintableAreaWidth, prnt.PrintableAreaHeight);
+                //Canvas1.Measure(pageSize);
+                //Canvas1.Arrange(new Rect(5, 5, pageSize.Width, pageSize.Height));
 
 
 
                 if (prnt.ShowDialog() == true)
-                    {
-                        prnt.PrintVisual(Canvas1, "Printing Canvas");
-                    }
+                {
+                //    prnt.PrintVisual(Canvas1, "Printing Canvas");
+                //}
 
 
                 //Size pageSize = new Size(prnt.PrintableAreaWidth, prnt.PrintableAreaHeight);
 
                 //Canvas1.Measure(pageSize);
-                //Canvas1.Arrange(new Rect(5, 5, pageSize.Width, pageSize.Height));
+                //Canvas1.Arrange(new Rect(1, 1, pageSize.Width, pageSize.Height));
 
                 //store original scale
                 //Transform originalScale = Canvas1.LayoutTransform;
@@ -284,13 +284,16 @@ namespace MTG_Draw
                 //get scale of the print wrt to screen of WPF visual
                 //double scale = Math.Min(prnt.PrintableAreaWidth / Canvas1.ActualWidth, prnt.PrintableAreaHeight / Canvas1.ActualHeight);
 
-                //Transform the Visual to scale
-                //Canvas1.LayoutTransform = new ScaleTransform(1, 1);
+                    //Console.WriteLine("Scale:" + scale + "    prnt.PrintableAreaWidth: " + prnt.PrintableAreaWidth + "    prnt.PrintableAreaHeight: " + prnt.PrintableAreaHeight);
 
-                //prnt.PrintVisual(Canvas1, "Printing Canvas"); 
-                
+                //Transform the Visual to scale
+                //Canvas1.LayoutTransform = new ScaleTransform(scale,scale);
+
+                prnt.PrintVisual(Canvas1, "Printing Canvas");
+
                 //apply the original transform.
                 //Canvas1.LayoutTransform = originalScale;
+                }
             }
         }
 
