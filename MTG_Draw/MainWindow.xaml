@@ -204,14 +204,455 @@
 
         <!--<Grid DockPanel.Dock="Top" Background="Red">-->
             <!--<StackPanel Background="Blue">-->
-                <Canvas Background="WhiteSmoke" HorizontalAlignment="Left" VerticalAlignment="Top"  x:Name="Canvas1"  
+            <!--    <Canvas Background="WhiteSmoke" HorizontalAlignment="Left" VerticalAlignment="Top"  x:Name="Canvas1"  
                         ScrollViewer.CanContentScroll="False" 
                         MouseLeftButtonDown="Canvas1_MouseLeftButtonDown" 
                         MouseLeftButtonUp="Canvas1_MouseLeftButtonUp" 
                         MouseWheel="MouseWheelHandler" Height="Auto" Width="Auto" >
-                </Canvas>
+                </Canvas> -->
             <!--</StackPanel>-->
         <!--</Grid>-->
+
+             <!--i used scroll viewver moving this whole and I also used grid for positioning and draging-->
+        <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden">
+            <Grid  DockPanel.Dock="Top" VerticalAlignment="Top"   Background="White"   x:Name="Canvas1"  
+                         Height="Auto" Width="1309" Margin="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*" >
+
+                    </RowDefinition>
+                    <RowDefinition Height="60*" >
+
+                    </RowDefinition>
+                    <RowDefinition Height="10*" >
+
+                    </RowDefinition>
+                    <RowDefinition Height="20*" >
+
+                    </RowDefinition>
+
+
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="*"    >
+
+                    </ColumnDefinition>
+
+
+                </Grid.ColumnDefinitions>
+                <!-- header grid-->
+
+
+                <Grid     Grid.Column="0" Grid.Row="0" Background="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"  >
+                        </RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions >
+                        <ColumnDefinition Width="*"   >
+                        </ColumnDefinition>
+                        <ColumnDefinition Width="*"  >
+                        </ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label  Width="151" Height="80" Grid.Row="0" Grid.Column="0" FontWeight="DemiBold" FontStyle="Italic" FontSize="70" Padding="0" Content="MTG" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" ></Label>
+                    <TextBox x:Name="headerTxtBox1" IsReadOnly="True" BorderThickness="0" Width="105" Height="70" Grid.Row="0" Grid.Column="0"   FontSize="11" Text="MTG"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="161,10,390,0" TextWrapping="Wrap" ></TextBox>
+                    <TextBox x:Name="headerTxtBox2" IsReadOnly="True" BorderThickness="0" Width="272" Height="105" Grid.Row="0" Grid.Column="1" FontWeight="DemiBold"   FontSize="14"   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,1,0,0" TextWrapping="Wrap">
+
+                    </TextBox>
+
+                </Grid>
+                <!--main grid-->
+                <!--rdefined grid-->
+                <Grid Grid.Column="0" Grid.Row="1">
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="*"   >
+                        </RowDefinition>
+                        <RowDefinition Height="*"  >
+                        </RowDefinition>
+                        <RowDefinition Height="*"  >
+                        </RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions >
+                        <ColumnDefinition Width="*"   >
+                        </ColumnDefinition>
+
+                    </Grid.ColumnDefinitions>
+                    <!--header  daragable bars grid-->
+                    <Grid Grid.Column="0" Grid.Row="0" Height="100" >
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="100*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="16*"  ></ColumnDefinition>
+                            <ColumnDefinition  Width="28.5*"   ></ColumnDefinition>
+                            <ColumnDefinition  Width="28.5*"  ></ColumnDefinition>
+                            <ColumnDefinition  Width="28.5*"></ColumnDefinition>
+                            <ColumnDefinition Width="12*"></ColumnDefinition>
+
+                        </Grid.ColumnDefinitions>
+
+                        <Grid x:Name="bar1Col"  PreviewMouseMove="bar1Col_PreviewMouseMove" PreviewMouseLeftButtonUp="bar1Grid_PreviewMouseLeftButtonUp" Background="White" Grid.Column="1" Grid.Row="0"  >
+                            <Grid.RowDefinitions >
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions >
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid x:Name="bar1Grid"      PreviewMouseLeftButtonDown="bar1Grid_PreviewMouseLeftButtonDown"   Margin="0,0,10,10" Width="200" Height="14" Background="#FFE0E0E0"/>
+
+                        </Grid>
+                        <Grid x:Name="bar2Col"  PreviewMouseMove="bar2Col_PreviewMouseMove" PreviewMouseLeftButtonUp="bar2Grid_PreviewMouseLeftButtonUp" Background="White" Grid.Column="2" Grid.Row="0"  >
+                            <Grid.RowDefinitions >
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions >
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid x:Name="bar2Grid"    PreviewMouseLeftButtonDown="bar2Grid_PreviewMouseLeftButtonDown"   Margin="0,0,10,10" Width="200" Height="14" Background="#FFE0E0E0"/>
+
+                        </Grid>
+                        <Grid x:Name="bar3Col"  PreviewMouseMove="bar3Col_PreviewMouseMove" PreviewMouseLeftButtonUp="bar3Grid_PreviewMouseLeftButtonUp" Background="White" Grid.Column="3" Grid.Row="0"  >
+                            <Grid.RowDefinitions >
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions >
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid x:Name="bar3Grid"    PreviewMouseLeftButtonDown="bar3Grid_PreviewMouseLeftButtonDown"   Margin="0,0,10,10" Width="200" Height="14" Background="#FFE0E0E0"/>
+
+                        </Grid>
+                    </Grid>
+
+                    <!--Here is itemems grid -->
+                    <Grid Grid.Column="0" Grid.Row="1">
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="100*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                            <ColumnDefinition Width="80*"></ColumnDefinition>
+                            <ColumnDefinition Width="10*"></ColumnDefinition>
+
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0" Grid.Row="0" Width="96" Height="34" Content="Einspeisung" FontSize="16" RenderTransformOrigin="0.5,0.5" Margin="-30,8,4,9"  >
+                            <Label.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="270"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Label.RenderTransform>
+
+
+                        </Label>
+                        <!--here is added items grid in which we add items-->
+                        <Grid Grid.Column="1" Grid.Row="0"  Background="LightGray"   >
+                            <Grid.RowDefinitions  >
+                                <RowDefinition Height="*"  ></RowDefinition>
+                                <RowDefinition Height="*"  ></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions >
+                                <ColumnDefinition Width="10*"   ></ColumnDefinition>
+                                <ColumnDefinition Width="90*"  ></ColumnDefinition>
+
+                            </Grid.ColumnDefinitions>
+                            <Grid  Grid.Column="0"    Background="White" >
+                                <Image  Stretch="Fill"   Width="107" Height="18" Source="Images/arow.jpg" HorizontalAlignment="Left" Margin="0,10,0,0"  ></Image>
+                            </Grid>
+                            <!--add row1 block will be add here-->
+                            <Grid x:Name= "blocksGrid"  PreviewMouseMove="blocksGrid_PreviewMouseMove" Background="LightGray" PreviewMouseLeftButtonUp="itmBlck1Bor_PreviewMouseLeftButtonUp" Grid.Column="1" Grid.Row="0" Margin="5,0,0,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*">
+                                    </RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*">
+                                    </ColumnDefinition>
+                                    <ColumnDefinition Width="*">
+                                    </ColumnDefinition>
+                                    <ColumnDefinition Width="*">
+                                    </ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Border x:Name="itmBlck1Bor"  Grid.Column="0" Grid.Row="0" PreviewMouseLeftButtonDown="itmBlck1Bor_PreviewMouseLeftButtonDown"   Background="LightGray"    Width="313" Height="50" BorderThickness="1,1,1,1"  BorderBrush="Gray"  Margin="6,10,0,2" HorizontalAlignment="Left" >
+
+
+                                    <Grid  Width="Auto"  Height="Auto" >
+                                        <Grid  x:Name="itms1Grid"  Grid.Column="0" Margin="10,0,286,0">
+                                            <Label x:Name="itemIDLabel1" HorizontalAlignment="Left"  Padding="0" VerticalAlignment="Top"  Content="1" FontSize="12"   Height="18" Width="10" Margin="10,1,0,0"  ></Label>
+                                            <Image    Source="Images/itmimg.png"  Width="29" Height="30" Margin="0,16,-14,2" HorizontalAlignment="Center"  ></Image>
+                                        </Grid>
+                                    </Grid>
+
+                                </Border>
+                                <Border Grid.Row="0" PreviewMouseLeftButtonDown="itmBlck1Bor_PreviewMouseLeftButtonDown"   Background="LightGray"    Width="323" Height="50" BorderThickness="1,1,1,1"  BorderBrush="Gray"  Margin="328,10,0,2"  HorizontalAlignment="Left" Grid.ColumnSpan="2" >
+
+
+                                    <Grid  Width="Auto"  Height="Auto" >
+                                        <Grid   Grid.Column="0" Margin="10,0,286,0">
+                                            <Label  HorizontalAlignment="Left"  Padding="0" VerticalAlignment="Top"  Content="1" FontSize="12"   Height="18" Width="10" Margin="10,1,0,0"  ></Label>
+                                            <Image    Source="Images/itmimg.png"  Width="30" Height="30" Margin="0,15,0,0" HorizontalAlignment="Left"  ></Image>
+                                        </Grid>
+                                    </Grid>
+
+                                </Border>
+
+
+                            </Grid>
+                            <!--add second row block and last row-->
+                            <Grid  Grid.Column="0" Grid.Row="1" Background="White" >
+                                <Image  Stretch="Fill"   Width="107" Height="18" Source="Images/arow.jpg" HorizontalAlignment="Left" Margin="0,0,0,10"  ></Image>
+                            </Grid>
+                            <Grid x:Name="blocks2Grid" PreviewMouseMove="blocksGrid_PreviewMouseMove" Background="LightGray" PreviewMouseLeftButtonUp="itmBlck1Bor_PreviewMouseLeftButtonUp" Grid.Column="1" Grid.Row="1">
+
+                                <Border x:Name="footBlck1Bor"  PreviewMouseLeftButtonDown="itmBlck1Bor_PreviewMouseLeftButtonDown"   Background="LightGray"    Width="313" Height="50" BorderThickness="1,1,1,1"  BorderBrush="Gray"  Margin="10,1,0,13" HorizontalAlignment="Left" >
+
+                                    <!--Here will be added defualt end row and others-->
+
+                                    <Grid  Width="Auto"  Height="Auto" Margin="290,4,10,6" >
+                                        <Image    Source="Images/itmimg.png" Height="30" Margin="-50,4,37,4"  />
+                                        <Image    Source="Images/itmimg.png"  Width="32" Height="30" Margin="-21,4,0,4" HorizontalAlignment="Right"  ></Image>
+
+                                    </Grid>
+                                </Border>
+                                <Border      Background="LightGray"    Width="324" Height="50" BorderThickness="1,1,1,1"  BorderBrush="Gray"  Margin="330,1,0,13" HorizontalAlignment="Left" >
+
+                                    <!--Here will be added defualt end row and others-->
+
+                                    <Grid  Width="Auto"  Height="Auto" Margin="290,4,10,6" >
+                                        <Image    Source="Images/itmimg.png" Height="30" Margin="-40,5,36,3"  />
+                                        <Image    Source="Images/itmimg.png"  Width="30" Height="30" Margin="0,0,0,0" HorizontalAlignment="Right"  ></Image>
+
+                                    </Grid>
+                                </Border>
+                                <Border      Background="LightGray"    Width="323" Height="50" BorderThickness="1,1,1,1"  BorderBrush="Gray"  Margin="669,0,0,14" HorizontalAlignment="Left" >
+
+                                    <!--Here will be added defualt end row and others-->
+
+                                    <Grid  Width="Auto"  Height="Auto" Margin="290,4,10,6" >
+                                        <Image    Source="Images/itmimg.png" Height="30" Margin="-43,4,37,4"  />
+                                        <Image    Source="Images/itmimg.png"  Width="32" Height="30" Margin="-11,4,0,4" HorizontalAlignment="Right"  ></Image>
+
+                                    </Grid>
+                                </Border>
+
+                            </Grid>
+
+
+                        </Grid>
+
+                        <Label Grid.Column="2" Grid.Row="0" Width="96" Content="Senkrecht" FontSize="16" HorizontalAlignment="Right" Margin="0,17,11,76"    >
+                            <Label.RenderTransform>
+                                <TransformGroup>
+
+                                    <RotateTransform Angle="90"/>
+
+                                </TransformGroup>
+                            </Label.RenderTransform>
+
+
+                        </Label>
+
+                    </Grid>
+                    <Grid Grid.Column="0" Grid.Row="2" Height="100" >
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="100*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="15.5*"  ></ColumnDefinition>
+                            <ColumnDefinition Width="28.5*"  ></ColumnDefinition>
+                            <ColumnDefinition Width="28.5*"  ></ColumnDefinition>
+                            <ColumnDefinition Width="28.5*"></ColumnDefinition>
+                            <ColumnDefinition Width="12*"></ColumnDefinition>
+
+                        </Grid.ColumnDefinitions>
+                        <!--here is  block bottom Dragable 1-->
+                        <Grid x:Name="block1Col" Background="White" PreviewMouseMove="block1Col_PreviewMouseMove" PreviewMouseLeftButtonUp="block1Col_PreviewMouseLeftButtonUp" Grid.Column="1"  Grid.Row="0">
+
+                            <Border    CornerRadius="10"   Width="22" Height="22" BorderThickness="1"  BorderBrush="LightGray" Margin="74,20,235,58">
+                                <Label Content="+" FontSize="14" Padding="0" Foreground="LightGray"/>
+                            </Border>
+
+                            <Grid  x:Name="block1MovGrid" Width="200" Height="22" Background="White"  Grid.Column="1"   Grid.Row="0" Margin="54,69,74,9">
+                                <Border  x:Name="block1Grid" PreviewMouseLeftButtonDown="block1Drag_PreviewMouseLeftButtonDown"  CornerRadius="2"  Width="200" Height="12" BorderThickness="1"  HorizontalAlignment="Left" Background="White" BorderBrush="LightGray"  >
+
+                                </Border>
+                                <Border  CornerRadius="9.9"   Width="22" Height="22" BorderThickness="0,1,0,1"  BorderBrush="LightGray" Margin="13,0,168,0"/>
+                                <Border CornerRadius="9.9"  Width="22" Height="22" BorderThickness="0,1,0,1"  BorderBrush="LightGray"/>
+                                <Border  CornerRadius="9.9"   Width="22" Height="22" BorderThickness="0,1,0,1"  BorderBrush="LightGray" Margin="170,0,11,0" />
+                            </Grid>
+
+                        </Grid>
+                        <!--here is add block bottom Dragable 2-->
+                        <Grid x:Name="block2Col" Background="White" PreviewMouseMove="block2Col_PreviewMouseMove" PreviewMouseLeftButtonUp="block2Col_PreviewMouseLeftButtonUp" Grid.Column="2"  Grid.Row="0">
+
+                            <Border    CornerRadius="10"   Width="22" Height="22" BorderThickness="1"  BorderBrush="LightGray" Margin="74,20,235,58">
+                                <Label Content="+" FontSize="14" Padding="0" Foreground="LightGray"/>
+                            </Border>
+
+                            <Grid  x:Name="block2MovGrid" Width="200" Height="22" Background="White"  Grid.Column="1"   Grid.Row="0" Margin="54,69,74,9">
+                                <Border  x:Name="block2Grid" PreviewMouseLeftButtonDown="block2Drag_PreviewMouseLeftButtonDown"  CornerRadius="2"  Width="200" Height="12" BorderThickness="1"  HorizontalAlignment="Left" Background="White" BorderBrush="LightGray"  >
+
+                                </Border>
+                                <Border  CornerRadius="9.9"   Width="22" Height="22" BorderThickness="0,1,0,1"  BorderBrush="LightGray" Margin="13,0,168,0"/>
+                                <Border CornerRadius="9.9"  Width="22" Height="22" BorderThickness="0,1,0,1"  BorderBrush="LightGray"/>
+                                <Border  CornerRadius="9.9"   Width="22" Height="22" BorderThickness="0,1,0,1"  BorderBrush="LightGray" Margin="170,0,11,0" />
+                            </Grid>
+
+                        </Grid>
+                        <!--here is add block bottom Dragable 3-->
+                        <Grid x:Name="block3Col" Background="White" PreviewMouseMove="block3Col_PreviewMouseMove" PreviewMouseLeftButtonUp="block3Col_PreviewMouseLeftButtonUp" Grid.Column="3"  Grid.Row="0">
+
+                            <Border    CornerRadius="10"   Width="22" Height="22" BorderThickness="1"  BorderBrush="LightGray" Margin="74,20,235,58">
+                                <Label Content="+" FontSize="14" Padding="0" Foreground="LightGray"/>
+                            </Border>
+
+                            <Grid  x:Name="block3MovGrid" Width="200" Height="22" Background="White"  Grid.Column="1"   Grid.Row="0" Margin="54,69,74,9">
+                                <Border  x:Name="block3Grid" PreviewMouseLeftButtonDown="block3Drag_PreviewMouseLeftButtonDown"  CornerRadius="2"  Width="200" Height="12" BorderThickness="1"  HorizontalAlignment="Left" Background="White" BorderBrush="LightGray"  >
+
+                                </Border>
+                                <Border  CornerRadius="9.9"   Width="22" Height="22" BorderThickness="0,1,0,1"  BorderBrush="LightGray"  Margin="13,0,168,0"/>
+                                <Border CornerRadius="9.9"  Width="22" Height="22" BorderThickness="0,1,0,1"  BorderBrush="LightGray"/>
+                                <Border  CornerRadius="9.9"   Width="22" Height="22" BorderThickness="0,1,0,1"  BorderBrush="LightGray" Margin="170,0,11,0" />
+                            </Grid>
+
+                        </Grid>
+
+                    </Grid>
+
+                </Grid>
+
+                <!--bar image-->
+                <Image Grid.Column="0" Grid.Row="2"  Width="auto" Height="9" Stretch="Fill" Margin="30,20,370,10" Source="Images/barimg.jpg"></Image>
+
+                <!--Footer grid-->
+
+                <Grid x:Name="FooterGrid"  Grid.Column="0" Grid.Row="3"    MouseLeftButtonDown="ItemGrid_MouseLeftButtonDown" MouseMove="ItemGrid_MouseMove" Drop="ItemGrid_Drop" DragEnter="ItemGrid_DragEnter" Margin="0,0,0,-122" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"  >
+                        </RowDefinition>
+
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions >
+                        <ColumnDefinition Width="*"    >
+
+                        </ColumnDefinition>
+                        <ColumnDefinition Width="*"  >
+                        </ColumnDefinition>
+                        <ColumnDefinition Width="*"  >
+                        </ColumnDefinition>
+
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" Grid.Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="15*"  >
+
+                            </RowDefinition>
+                            <RowDefinition Height="85*"  >
+
+                            </RowDefinition>
+
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="*"    >
+
+                            </ColumnDefinition>
+
+
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0"  Grid.Row="0" Content="Legende" FontSize="12" FontFamily="Arial" FontWeight="DemiBold" >
+                        </Label>
+                        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Vertical"  >
+                            <Label  Content="Deckelschnitt" Margin="40,0,0,0" FontSize="12" FontFamily="Arial" Width="393" >
+                            </Label>
+                            <Image  Width="25" Height="25" Source="Images/itmimg.png" Margin="8,0,404,0"  />
+                            <Label  Content="Potentialausgleichsbuchse doppelt versenkt" Margin="43,-25,11,5" FontSize="12" FontFamily="Arial" />
+                            <Image Source="Images/itmimg.png"  Width="25" Height="25" Margin="8,0,404,0"  />
+                            <Label  Content="PEHA steckdose grun mitt knotrollleuchte und Beschriftungsfeld" Margin="43,-25,11,5" FontSize="12" FontFamily="Arial" />
+                            <Image   Source="Images/itmimg.png" Width="25" Height="25" Margin="8,0,404,0"  />
+                            <Label  Content="Leerdose" Margin="43,-25,11,5" FontSize="12" FontFamily="Arial" />
+                            <Image Source="Images/itmimg.png"  Width="25" Height="25" Margin="8,0,404,0"  />
+                            <Label  Content="PEHA RJ45 Doppeldose mitt knotrollleuchte und Beschriftungsfeld" Margin="43,-25,11,5" FontSize="12" FontFamily="Arial" />
+                            <Image Source="Images/itmimg.png"  Width="25" Height="25" Margin="8,0,404,0"  />
+                            <Label  Content="Drager Gasentnehmeventil Sauerstoff" Margin="43,-25,11,5" FontSize="12" FontFamily="Arial" />
+                            <Image Source="Images/itmimg.png"  Width="25" Height="25" Margin="8,0,404,0"  />
+                            <Label  Content="Drager Gasentnehmeventil Air" Margin="43,-25,11,5" FontSize="12" FontFamily="Arial" />
+
+                        </StackPanel>
+
+
+                    </Grid>
+                    <Grid Grid.Column="1" Grid.Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="15*"  >
+
+                            </RowDefinition>
+                            <RowDefinition Height="85*"  >
+
+                            </RowDefinition>
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="*"    >
+
+                            </ColumnDefinition>
+
+
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0"  Grid.Row="0" Content="Bemerkungen" FontSize="12" FontFamily="Arial" FontWeight="DemiBold" >
+                        </Label>
+                        <TextBox x:Name="bemerTxtBox" IsReadOnly="True"  Grid.Column="0" Grid.Row="1"  BorderThickness="0" FontSize="12" FontFamily="Arial"  TextWrapping="Wrap" Margin="5,0" >
+                        </TextBox>
+
+                    </Grid>
+
+                    <Grid Grid.Column="2" Grid.Row="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"  >
+
+                            </RowDefinition>
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="*"    >
+
+                            </ColumnDefinition>
+
+
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0"  Grid.Row="0" Margin="0,0,10,0" >
+                            <Border BorderBrush="#FFE01212" BorderThickness="1" HorizontalAlignment="Center" Margin="140,10,87,0">
+                                <StackPanel>
+                                    <Label  Content="Zur Fertigung Freigegeben" Foreground="#FFE01212" FontSize="14" FontFamily="Arial" >
+                                    </Label>
+                                    <Border BorderBrush="#FFE01212" BorderThickness="0,0,0,1" Margin="20,40,20,0">
+                                    </Border>
+                                    <Label  Content="Datum" Foreground="#FFE01212" FontSize="12" FontFamily="Arial" Margin="21,0,19,0" Width="45" HorizontalAlignment="Left"  >
+                                    </Label>
+                                    <Label  Content="Auftraggeber" Foreground="#FFE01212" FontSize="14" FontFamily="Arial" Margin="10,-26,21,0" Width="92" HorizontalAlignment="Right"  >
+
+                                    </Label>
+                                </StackPanel>
+                            </Border>
+                            <TextBox x:Name="footRightLabel" IsReadOnly="True" BorderThickness="0" Foreground="#FFE01212" Height="72" Margin="146,0,93,0" TextWrapping="Wrap" FontSize="12" Text="Die Fortigung reach clear"></TextBox>
+                        </StackPanel>
+                    </Grid>
+
+               
+                </Grid>
+
+
+            </Grid>
+
+
+        </ScrollViewer>
+
 
 
 
