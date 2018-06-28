@@ -82,6 +82,7 @@ namespace MTG_Draw
             _scaleTransform = new ScaleTransform();
             _transformGroup = new TransformGroup();
 
+            fillData();
 
 
 
@@ -177,7 +178,51 @@ namespace MTG_Draw
 
         #endregion
 
+// I used this for fill data into MTG printable document
 
+        private void fillData()
+        {
+           
+            XmlDocument docXml = new XmlDocument();
+            docXml.Load(@"C:\Users\Malik Mehdi\Desktop\MTG-Draw\MTG-Draw\MTG_Draw\Auftrag-Auftrag18363-Pos.1-Pos.Saale-MED-Asklepios Langen E107 Ruheraum Vorbereitung-V1-21.05.20.xml");
+            XmlNodeList lstProduct;
+
+            // here i am getting all file
+            lstProduct = docXml.GetElementsByTagName("ID");
+            //MessageBox.Show(lstProduct.Item(0).InnerText.ToString());
+
+            headerTxtBox1.Text = "MTG Gmbh Senkrecht 8-10 00280 Sutzac \nTel :23594-3245 \nwww.mtg-gmbh.de";
+
+            lstProduct = docXml.GetElementsByTagName("Auftrag");
+            headerTxtBox2.Text +=lstProduct.Item(0).InnerText;
+            lstProduct = docXml.GetElementsByTagName("BezeichnungAuftrag");
+            headerTxtBox2.Text += " " + lstProduct.Item(0).InnerText;
+
+            lstProduct = docXml.GetElementsByTagName("Position");
+            headerTxtBox2.Text += "\nPosition: " + lstProduct.Item(0).InnerText;
+
+            lstProduct = docXml.GetElementsByTagName("Anzahl");
+            headerTxtBox2.Text += " " + lstProduct.Item(0).InnerText;
+
+            lstProduct = docXml.GetElementsByTagName("BezeichnungPosition");
+            headerTxtBox2.Text += " Stuck " + lstProduct.Item(0).InnerText;
+
+            lstProduct = docXml.GetElementsByTagName("Zeichner");
+            headerTxtBox2.Text += "\ngezeichnet:  " + lstProduct.Item(0).InnerText;
+
+            lstProduct = docXml.GetElementsByTagName("Datum");
+
+            headerTxtBox2.Text += " Datum:  " + lstProduct.Item(0).InnerText;
+
+            // here we will add item into grid with relative  positions
+            // all operation will be perform
+
+
+            // fotter 
+            lstProduct = docXml.GetElementsByTagName("Bemerkungstext");
+            bemerTxtBox.Text =  lstProduct.Item(0).InnerText;
+
+        }
 
         private void SerializeToXml(Produkt produkt)
         {
